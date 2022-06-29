@@ -18,10 +18,14 @@ public:
            check[h1->val]++;
             if(check[h1->val]>1){
                 h2->next = h1->next;
+                check[h1->val]--;
+                h1 = h1->next;
+                continue;
             }
             h2 = h1;
             h1 = h1->next;
         }
+    
         return head;
     }
 };
