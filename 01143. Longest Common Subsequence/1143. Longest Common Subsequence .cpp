@@ -15,6 +15,7 @@ if the length of either of the strings is zero then obviously the subsequence ha
                     dp[i][j] =  1+dp[i-1][j-1];
                 else {
                     dp[i][j] =  max(dp[i][j-1],dp[i-1][j]); // If there is a mismatch we , take maximum of subproblems and store it in the array , in this question the only two subproblems exsist
+                    // If it is a substring then the lenght has to be zero
                 }
             }
         }
